@@ -3,17 +3,20 @@
 import math
 
 def root(a,b):
-    return math.sqrt((a+b)**3/(a+b)**2)
+    return math.sqrt((a-b)**3/(a+b)**2)
 try:
-    result = root(3,3)
+    result = root(0.2,0.1)
     print(result)
    
 except(ZeroDivisionError):
     print('Деление на ноль')
+
 except(TypeError):
     print('Ошибка типов данных')
+
 except(ValueError):
     print('Извлечение корня из отрицательного числа')
+
 except Exception as e:
     print(f'Тип ошибки: {e}') 
 
